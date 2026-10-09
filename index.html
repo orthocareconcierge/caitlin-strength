@@ -97,6 +97,7 @@ body{font-family:'Jost',sans-serif;background:var(--black);color:var(--white);mi
 .log-in:focus{outline:none;border-color:var(--gold);}
 .add-set{background:none;border:1px dashed rgba(201,168,76,0.3);color:var(--gold);border-radius:6px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:6px;width:100%;cursor:pointer;margin-top:2px;}
 .lastwt{font-size:9.5px;color:var(--gold-dark);margin-bottom:6px;letter-spacing:0.03em;}
+.coach-note{font-size:11px;color:var(--gold-light);background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);border-radius:7px;padding:7px 9px;margin:0 0 8px;line-height:1.5;font-weight:300;}
 .feel-row{display:flex;gap:6px;margin-top:7px;}
 .feel-row .log-in{flex:1;}
 
@@ -234,7 +235,7 @@ const BANK = {
   squat:[
     {n:'Leg Press',t:'machine',c:'Feet shoulder width on the plate, lower until your knees are about 90°, press through your whole foot. Do not let your low back round off the pad.'},
     {n:'Goblet Squat',t:'free',c:'Hold a dumbbell at your chest, sit your hips down between your knees, drive up through your heels. Chest tall.'},
-    {n:'Hack Squat Machine',t:'machine',c:'Shoulders under the pads, lower under control to about 90°, press back up through your whole foot.'},
+    {n:'Hack Squat Machine',t:'machine',c:'Shoulders under the pads, lower under control to about 90°, press back up through your whole foot.',coach:'Hold 50 lb and build 8 → 12 reps before adding weight. Set your feet a touch higher on the platform and drive through your heels and mid-foot, not your toes.'},
     {n:'Smith Machine Squat',t:'machine',c:'Bar on your upper back, sit down and back, drive up. The guided bar keeps you stable.'},
     {n:'Leg Extension Machine',t:'machine',c:'Straighten your knees to lift the pad, squeeze the fronts of the thighs, lower slowly. Stop just short of a hard lockout.'},
     {n:'Box Squat to Bench',t:'free',c:'Sit back to lightly touch a bench, then stand tall. Controls your depth and keeps it honest.'},
@@ -243,15 +244,15 @@ const BANK = {
   hinge:[
     {n:'Dumbbell Romanian Deadlift',t:'free',c:'Soft knees, push your hips straight back, lower the dumbbells along your thighs with a flat back, drive your hips forward to stand. Feel it in your hamstrings.'},
     {n:'Kickstand RDL',t:'free',c:'One foot slightly back as a kickstand, most weight on the front leg. Hinge your hips back, flat back, stand tall squeezing the glute.'},
-    {n:'Seated Leg Curl Machine',t:'machine',c:'Pad on the back of your lower legs, curl your heels down and under, squeeze the hamstrings, return slowly.'},
+    {n:'Seated Leg Curl Machine',t:'machine',c:'Pad on the back of your lower legs, curl your heels down and under, squeeze the hamstrings, return slowly.',coach:'Last time felt easy — nudge up to about 25 lb.'},
     {n:'Lying Leg Curl Machine',t:'machine',c:'Face down, curl your heels toward your glutes, squeeze, lower under control.'},
     {n:'Cable Pull-Through',t:'cable',c:'Rope between your legs from a low cable, hinge your hips back then drive forward to stand tall and squeeze the glutes.'},
-    {n:'Hip Thrust',t:'free',c:'Upper back on a bench, weight across your hips, drive your hips up until your body is level, squeeze the glutes, lower slowly.'},
+    {n:'Machine Hip Thrust',t:'machine',c:'Sit into the hip thrust machine with the pad across your hips, drive your hips up until your body is level, squeeze the glutes hard at the top, lower slowly. No machine? Do a dumbbell glute bridge on the floor with the weight across your hips.',coach:'This replaces the barbell hip thrust so you can load it easily and in small jumps. Pick a weight that has you at RPE 7–8 by the last rep.'},
     {n:'Single-Leg Hip Bridge',t:'bw',c:'On your back, one foot down, other leg up. Drive your hips up through the down heel, squeeze the glute, lower slowly.'},
     {n:'Kettlebell Deadlift',t:'kb',c:'Kettlebell between your feet, hinge down with a flat back, stand tall driving through your heels and squeezing your glutes.'}
   ],
   lunge:[
-    {n:'Reverse Lunge (Dumbbells)',t:'free',c:'Step back and lower your back knee toward the floor, drive through the front heel to stand. Keep your trunk tall.'},
+    {n:'Reverse Lunge (Dumbbells)',t:'free',c:'Step back and lower your back knee toward the floor, drive through the front heel to stand. Keep your trunk tall.',coach:'These were comfortable last time — go up to about 55–60 lb.'},
     {n:'Walking Lunge',t:'free',c:'Step forward into a lunge, lower the back knee, drive up and step through. Keep your front knee over your foot.'},
     {n:'Bulgarian Split Squat',t:'free',c:'Back foot up on a bench, lower straight down over your front leg, drive up through the front heel. Go light to start.'},
     {n:'Dumbbell Step-Up',t:'free',c:'Step up onto a box driving through the top foot, stand tall, lower slowly. Keep the knee tracking over the foot.'},
@@ -260,7 +261,7 @@ const BANK = {
   ],
   glute:[
     {n:'Hip Abduction Machine',t:'machine',c:'Press your knees out against the pads, squeeze the outer hips, return slowly.'},
-    {n:'Cable Glute Kickback',t:'cable',c:'Ankle strap on a low cable, drive one leg straight back squeezing the glute, return under control. Keep your trunk still.'},
+    {n:'Cable Glute Kickback',t:'cable',c:'Ankle strap on a low cable, drive one leg straight back squeezing the glute, return under control. Keep your trunk still.',coach:'Keep easing the weight up as it feels good — no rush, control the whole way.'},
     {n:'Lateral Band Walk',t:'bw',c:'Band around your legs, half-squat, step side to side keeping tension on the band the whole time.'},
     {n:'Standing Cable Hip Abduction',t:'cable',c:'Ankle strap low, lift the outside leg out to the side against the cable, lower slowly. Hold something for balance.'},
     {n:'Glute Bridge March',t:'bw',c:'Bridge your hips up and hold, then march one knee up at a time without letting your hips drop or twist.'},
@@ -269,7 +270,7 @@ const BANK = {
   calf:[
     {n:'Standing Calf Raise',t:'machine',c:'Rise up onto the balls of your feet, pause at the top, lower slowly for a full stretch.'},
     {n:'Seated Calf Raise',t:'machine',c:'Pad on your thighs, drive up onto the balls of your feet, lower slowly. Hits the lower calf.'},
-    {n:'Leg Press Calf Raise',t:'machine',c:'Balls of your feet on the bottom of the plate, press through to point your toes, lower under control.'},
+    {n:'Leg Press Calf Raise',t:'machine',c:'Balls of your feet on the bottom of the plate, press through to point your toes, lower under control.',coach:'Add 5–10 lb this time — your reps were plenty high.'},
     {n:'Single-Leg Calf Raise',t:'bw',c:'Hold something for balance, rise up on one foot, lower slowly. Switch sides.'}
   ],
   /* FULL-BODY compounds */
@@ -528,6 +529,7 @@ function mainCard(key,e,d){
         <span class="dose-pill">RPE <b>${d.rpe}</b></span>
         <span class="dose-pill">Zone <b>${d.zone}</b></span>
       </div>
+      ${e.coach?`<div class="coach-note">&#9733; Kelly: ${esc(e.coach)}</div>`:''}
       <div class="log-wrap">
         <div class="log-title">Log your sets &nbsp;·&nbsp; weight / reps / RPE</div>
         ${lasth}${rows}
