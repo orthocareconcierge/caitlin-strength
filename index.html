@@ -186,7 +186,7 @@ const BANK = {
     {n:'Chest Press Machine',t:'machine',c:'Seated, handles at mid-chest. Press smoothly to nearly straight arms and control the return. Keep shoulders down and back flat on the pad.',coach:'Start at 50 lb (your free-weight working weight) and push your later sets to 55–60.'},
     {n:'Incline Dumbbell Press',t:'free',c:'Bench set to a low incline. Press the dumbbells up and slightly together, lower until your elbows are just below shoulder height.'},
     {n:'Flat Dumbbell Bench Press',t:'free',c:'Lie back, dumbbells at chest. Press up over your shoulders and lower under control. Keep your wrists stacked over your elbows.'},
-    {n:'Cable Chest Press',t:'cable',c:'Handles set at chest height, split stance. Press forward and together, resist the pull on the way back.'},
+    {n:'Cable Chest Press',t:'cable',c:'Handles set at chest height, split stance. Press forward and together, resist the pull on the way back.',coach:'All three sets were RPE 6 — go up from 26 lb next time.'},
     {n:'Machine Chest Fly (Pec Deck)',t:'machine',c:'Soft bend in the elbows, bring the pads together in front of your chest, open slowly until you feel a gentle stretch.'},
     {n:'Push-Up (hands on bench if needed)',t:'bw',c:'Body in one line, hands under shoulders. Lower with control and press up. Raise your hands to a bench to make it easier.'},
     {n:'Landmine Press',t:'free',c:'Both hands or one on the barbell end, press up and slightly forward at an angle. Great if overhead bothers you.'}
@@ -205,7 +205,7 @@ const BANK = {
     {n:'Chest-Supported Row Machine',t:'machine',c:'Chest on the pad, pull the handles back by driving the elbows, squeeze the mid-back, return with control.'},
     {n:'One-Arm Dumbbell Row',t:'free',c:'Hand and knee on a bench, flat back. Row the dumbbell to your hip, lower slowly. Keep your trunk still.'},
     {n:'TRX Row',t:'trx',c:'Lean back on the straps, body straight, pull your chest to your hands, lower under control. Walk your feet in to make it harder.',coach:'To progress this one, walk your feet further forward so your body is more horizontal — that adds the load, no weight needed.'},
-    {n:'Incline Bench Dumbbell Row',t:'free',c:'Chest on an inclined bench, let the dumbbells hang, row them up to your ribs and lower slowly.'},
+    {n:'Incline Bench Dumbbell Row',t:'free',c:'Chest on an inclined bench, let the dumbbells hang, row them up to your ribs and lower slowly.',coach:'40 lb is a good working weight — add a little once 12 reps feels like RPE 6.'},
     {n:'Cable Face Pull',t:'cable',c:'Rope at face height, pull toward your forehead with elbows high, squeeze the rear shoulders, return slowly.'}
   ],
   pullV:[
@@ -233,7 +233,7 @@ const BANK = {
   ],
   /* LOWER — squat / quad */
   squat:[
-    {n:'Leg Press',t:'machine',c:'Feet shoulder width on the plate, lower until your knees are about 90°, press through your whole foot. Do not let your low back round off the pad.'},
+    {n:'Leg Press',t:'machine',c:'Feet shoulder width on the plate, lower until your knees are about 90°, press through your whole foot. Do not let your low back round off the pad.',coach:'These are light for you — start around 120 lb and keep climbing as it stays easy.'},
     {n:'Goblet Squat',t:'free',c:'Hold a dumbbell at your chest, sit your hips down between your knees, drive up through your heels. Chest tall.'},
     {n:'Hack Squat Machine',t:'machine',c:'Shoulders under the pads, lower under control to about 90°, press back up through your whole foot.',coach:'Hold 50 lb and build 8 → 12 reps before adding weight. Set your feet a touch higher on the platform and drive through your heels and mid-foot, not your toes.'},
     {n:'Smith Machine Squat',t:'machine',c:'Bar on your upper back, sit down and back, drive up. The guided bar keeps you stable.'},
@@ -248,7 +248,7 @@ const BANK = {
     {n:'Lying Leg Curl Machine',t:'machine',c:'Face down, curl your heels toward your glutes, squeeze, lower under control.'},
     {n:'Cable Pull-Through',t:'cable',c:'Rope between your legs from a low cable, hinge your hips back then drive forward to stand tall and squeeze the glutes.'},
     {n:'Machine Hip Thrust',t:'machine',c:'Sit into the hip thrust machine with the pad across your hips, drive your hips up until your body is level, squeeze the glutes hard at the top, lower slowly. No machine? Do a dumbbell glute bridge on the floor with the weight across your hips.',coach:'This replaces the barbell hip thrust so you can load it easily and in small jumps. Pick a weight that has you at RPE 7–8 by the last rep.'},
-    {n:'Single-Leg Hip Bridge',t:'bw',c:'On your back, one foot down, other leg up. Drive your hips up through the down heel, squeeze the glute, lower slowly.'},
+    {n:'Single-Leg Hip Bridge',t:'bw',c:'On your back, one foot down, other leg up. Drive your hips up through the down heel, squeeze the glute, lower slowly.',coach:'If you are not feeling your glute, tuck your pelvis (flatten your low back) before you lift and drive through your HEEL, not your toes — and it is totally fine to do a double-leg bridge with a weight across your hips instead.'},
     {n:'Kettlebell Deadlift',t:'kb',c:'Kettlebell between your feet, hinge down with a flat back, stand tall driving through your heels and squeezing your glutes.'}
   ],
   lunge:[
@@ -278,7 +278,7 @@ const BANK = {
     {n:'Dumbbell Thruster',t:'free',c:'Dumbbells at your shoulders, squat down, then drive up and press overhead in one motion. Big breather.'},
     {n:'Goblet Squat to Press',t:'free',c:'Squat with a dumbbell at your chest, stand and press it overhead, bring it back down to squat again.'},
     {n:'Kettlebell Swing',t:'kb',c:'Hinge and hike the bell back, snap your hips forward to float it to chest height. Power comes from the hips, not the arms.'},
-    {n:'Dumbbell Deadlift',t:'free',c:'Dumbbells at your sides, hinge down with a flat back, stand tall driving through your heels.'},
+    {n:'Dumbbell Deadlift',t:'free',c:'Dumbbells at your sides, hinge down with a flat back, stand tall driving through your heels.',coach:'50 lb felt comfortable — go up to 60+ next time.'},
     {n:'Renegade Row',t:'free',c:'Push-up position on dumbbells, row one up to your hip keeping your hips level, alternate. Widen your feet for balance.'},
     {n:'Push-Up to Row',t:'free',c:'Push-up on dumbbells, then row one dumbbell up to your hip, alternate sides.'},
     {n:'Step-Up to Knee Drive',t:'free',c:'Step up onto a box and drive the opposite knee up, lower under control and switch.'},
@@ -288,7 +288,7 @@ const BANK = {
   carry:[
     {n:'Farmer Carry',t:'free',c:'A heavy dumbbell in each hand, stand tall, walk with control for the distance or time. Breathe and keep your ribs down.'},
     {n:'Suitcase Carry',t:'free',c:'One dumbbell in one hand, walk tall without leaning. The opposite side works hard to keep you upright. Switch hands.'},
-    {n:'Front-Rack Kettlebell Carry',t:'kb',c:'Kettlebells at your shoulders, brace your trunk and walk tall for the distance or time.'}
+    {n:'Front-Rack Kettlebell Carry',t:'kb',c:'Kettlebells at your shoulders, brace your trunk and walk tall for the distance or time.',coach:'Nice work — add time or load once the 45-second walk feels easy.'}
   ],
   /* CORE finishers */
   core:[
